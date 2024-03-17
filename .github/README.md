@@ -1,31 +1,33 @@
-### What is this fork
+### GoToSocial kalaclista modded edition
 
-This fork is a personal modded version of [gotosocial](https://github.com/superseriousbusiness/gotosocial).
+This is a fork of [gotosocial](https://github.com/superseriousbusiness/gotosocial) to my personal fediverse instance.
 
-This fork deploy to [@nyarla@kalaclista.com](https://kalaclista.com/@nyarla) as a personal fedivese instance.
+#### Modded features
 
-### Modded features
+- Improve federation compatibility by opt-out `AUTHORIZED_FETCH` mode.
+  - this feature makes better federation between that doesn's support `AUTHORIZED_FETCH` by default.
+  - but it makes weaken to gotosocial privacy guard.
 
-- Imprpove federation compatibility for that doesn't support authorized fetch
-  - But this feature make weaken to gotosocial privacy protection.
+##### Configurations
 
-#### Configurations
+- `kalaclista-allowed-unauthorized-get` (default: false)
+  - turn off to `AUTHORIZED_FETCH` compatible mode.
 
-- `kalaclista-allowed-unauthorized-get`
-  - a boolean flag of turn off authorized fetch
+#### Quick hacks
 
-### Development
+- Skip to check Application Ids in post statuses.
+  - for my instance, some DB value broken about Application ID by my mistake operation.
 
-This modded version uses `git rebase` for track to upstream.
+#### Development
 
-Describe to branch means are:
+This fork uses `git rebase` as development to support upstream,
+and active branches are like as:
 
-- `main` - tracking branch for upstream gotosocial
-- `kakaclista` - default and merged branch of my mods
-- `unauthorized-fetch` - development branch for improve federation compatibility
-- `readme` - documentation branch for my modded version
-- `templates` - branch of make custom templates
+- `gotosocial-vX.Y.Z` - tracking branch to gotosocial
+- `kalaclista-vX.Y.Z` - main branch of my fork
+- `kalaclista-<topic>-vX.Y.Z` - this is the topic branch for my mods.
 
-### Maintainer
+#### Maintainer
 
 OKAMURA Naoki aka nyarla / [@nyarla@kalaclista.com](https://kalaclista.com/@nyarla)
+
