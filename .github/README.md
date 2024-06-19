@@ -52,7 +52,7 @@ $ VERSION=dev ./script/build.sh
 $ git push origin kalaclista-<topic>-vX.Y.Z
 
 # finally, merge all topic branches to kalaclista branch
-$ git switch -c kalaclista-vX.Y.Z kalaclista-vX.Y.Z
+$ git switch -c kalaclista-vX.Y.Z gotosocial-vX.Y.Z
 $ git rebase kalaclista-<topic>-vX.Y.Z # repeat it!
 $ git push kalaclista-vX.Y.Z
 ```
