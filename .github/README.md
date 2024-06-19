@@ -7,11 +7,15 @@ This is a fork of [gotosocial](https://github.com/superseriousbusiness/gotosocia
 - Improve federation compatibility by opt-out `AUTHORIZED_FETCH` mode.
   - this feature makes better federation between that doesn's support `AUTHORIZED_FETCH` by default.
   - but it makes weaken to gotosocial privacy guard.
+- Keep remote emojis forever to media cache
+  - this feature is just for me
 
 ##### Configurations
 
 - `kalaclista-allowed-unauthorized-get` (default: false)
   - turn off to `AUTHORIZED_FETCH` compatible mode.
+- `kalaclista-keep-emojis-forever` (default: false)
+  - keep remote emojis to media cache forver
 
 #### Quick hacks
 
@@ -30,4 +34,3 @@ and active branches are like as:
 #### Maintainer
 
 OKAMURA Naoki aka nyarla / [@nyarla@kalaclista.com](https://kalaclista.com/@nyarla)
-
