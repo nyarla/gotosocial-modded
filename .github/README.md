@@ -31,6 +31,32 @@ and active branches are like as:
 - `kalaclista-vX.Y.Z` - main branch of my fork
 - `kalaclista-<topic>-vX.Y.Z` - this is the topic branch for my mods.
 
+Rebase steps as:
+
+```bash
+# make base branch from upstream gotosocial
+$ git switch main
+$ git pull upstream main
+$ git checkout -b gotosocial-vX.Y.Z {rev}
+
+# make rebase branch from previous topic branch
+$ git switch -c kalaclista-<topic>-vX.Y.Z kalaclista-<topic>-vX.Y.Z
+
+# rebase new branch to upstream
+$ git rebase gotosocial-vX.Y.Z
+
+# testing...
+$ VERSION=dev ./script/build.sh
+
+# all tests ok, git push!
+$ git push origin kalaclista-<topic>-vX.Y.Z
+
+# finally, merge all topic branches to kalaclista branch
+$ git switch -c kalaclista-vX.Y.Z kalaclista-vX.Y.Z
+$ git rebase kalaclista-<topic>-vX.Y.Z # repeat it!
+$ git push kalaclista-vX.Y.Z
+```
+
 #### Maintainer
 
 OKAMURA Naoki aka nyarla / [@nyarla@kalaclista.com](https://kalaclista.com/@nyarla)
