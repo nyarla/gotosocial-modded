@@ -29,7 +29,7 @@ import (
 const (
 	hostMetaXMLNS                   = "http://docs.oasis-open.org/ns/xri/xrd-1.0"
 	hostMetaRel                     = "lrdd"
-	hostMetaType                    = "application/xrd+xml"
+	hostMetaType                    = "application/jrd+json"
 	hostMetaTemplate                = ".well-known/webfinger?resource={uri}"
 	nodeInfoVersion                 = "2.0"
 	nodeInfoSoftwareName            = "gotosocial"
